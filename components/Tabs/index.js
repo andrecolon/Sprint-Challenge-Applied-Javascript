@@ -34,8 +34,8 @@ const topicName = (title) => {
     tabTitle.classList.add('tab')
 
     //append data to element
-    tabTitle.textContent = title.topics;
-
+    tabTitle.textContent = title;
+    console.log(title)
     return tabTitle
 }
 

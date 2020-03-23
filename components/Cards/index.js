@@ -71,7 +71,6 @@ const articleCard = (obj) => {
     cardAuthor.appendChild(authNameSpan)
     cardImgDiv.appendChild(cardImg)
 
-    // cardImg.src = "https://i.picsum.photos/id/842/200/300.jpg"
     cardheadLine.textContent = obj.headline
     cardImg.src = obj.authorPhoto
     authNameSpan.textContent = obj.authorName

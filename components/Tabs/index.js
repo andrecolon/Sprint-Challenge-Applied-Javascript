@@ -14,7 +14,7 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
         console.log("An Array of Topics", response.data)
         const entryPoint = document.querySelector('.topics')
         response.data.topics.forEach(topicData => {
-            const newTopic = topicTab(topicData)
+            const newTopic = topicName(topicData)
             entryPoint.appendChild(newTopic)
         })
         console.log(newTopic)
@@ -25,27 +25,27 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
 
 const topicName = (title) => {
     //create element
-    topicTabDiv = document.createElement('div')
+    tabTitle = document.createElement('div')
 
     //append children to parent
-    topicContainer.appendChild(topicTabDiv)
+    topicContainer.appendChild(tabTitle)
 
     // Assign classes to elements
-    topicTabDiv.classList.add('tab')
+    tabTitle.classList.add('tab')
 
     //append data to element
-    tabTitle.textContent = topics[0];
+    tabTitle.textContent = title.topics;
 
-    return topicTabDiv
+    return tabTitle
 }
 
 const topicContainer = document.querySelector('.topics');
 // / Add the tab component to the DOM.
-topicContainer.appendChild(topicTab(tabTitle))
-
+topicContainer.appendChild(topicName())
+console.log(topicName())
 
 //const topicArray = ["javascript", "bootstrap"​​​​, "technology"​​, "jquery", "node.js"​​]
 
-response.data.topics.forEach(el => {
-    el.appendChild(tabTitle)
-})
+// response.data.topics.forEach(el => {
+//     el.appendChild(tabTitle)
+// })

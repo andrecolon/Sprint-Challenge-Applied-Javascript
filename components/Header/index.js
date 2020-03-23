@@ -9,4 +9,34 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+function Header() {
+    const headerDiv = document.createElement('div')
+    const hDateSpan = document.createElement('span')
+    const headerHOne = document.createElement('h1')
+    const headerSpan = document.createElement('span')
+
+
+    headerDiv.classList.add('header')
+    hDateSpan.classList.add('date')
+    headerSpan.classList.add('temp')
+
+
+    hDateSpan.textContent = "SMARCH 28, 2019"
+    headerHOne.textContent = "Lambda Times"
+    headerHOne.textContent = "98°"
+
+
+
+    headerDiv.appendChild(hDateSpan)
+    headerDiv.appendChild(headerHOne)
+    headerDiv.appendChild(headerSpan)
+
+    return headerDiv
+}
+
+
+
+
+const container = document.querySelector(".header-container");
+// / Step 6: add the menu component to the DOM.
+container.appendChild(Header())

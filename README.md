@@ -28,22 +28,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. What is the DOM?
+1. What is the DOM? 
 
-2. What is an event?
+2. What is an event? 
 
-3. What is an event listener?
+3. What is an event listener? 
 
-4. Why would we convert a NodeList into an Array?
+4. Why would we convert a NodeList into an Array? versus an HTML collection. To manipulate the dom elements 
 
-5. What is a component?
+5. What is a component? An already created set of variables, events, and functions built as an eclosed package in order to be re-used over and over again. 
 
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* [k] Fork the project into your GitHub user account
+* [k] Clone the forked project into a directory on your machine
+* [k] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [k] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 

@@ -7,3 +7,50 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+
+axios.get("https://lambda-times-backend.herokuapp.com/topics")
+    .then(response => {
+        console.log("An Array of Topics", response.data)
+        const entryPoint = document.querySelector('.topics')
+        response.data.topics.forEach(topicData => {
+            const newTopic = topicTab(topicData)
+            entryPoint.appendChild(newTopic)
+        })
+        console.log(newTopic)
+    })
+    .catch(err => {
+        console.log("Bad request for Topic fetch", err)
+    })
+
+let topicTab = () => {
+    //create element
+    topicTabDiv = document.createElement('div')
+
+    //append children to parent
+    topicContainer.appendChild(topicTabDiv)
+
+    // Assign classes to elements
+    topicTabDiv.classList.add('tab')
+
+    //append data to element
+    tabTitle.textContent = topics[0];
+
+    return topicTabDiv
+}
+
+const topicContainer = document.querySelector('.topics');
+// / Add the tab component to the DOM.
+topicContainer.appendChild(topicTab(tabTitle))
+
+
+/* topics: (5) […]
+​​
+0: "javascript"​​
+1: "bootstrap"​​
+2: "technology"​​
+3: "jquery"​​
+4: "node.js"​​
+length: 5
+
+*/

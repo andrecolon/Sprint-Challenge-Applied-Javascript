@@ -23,7 +23,7 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
         console.log("Bad request for Topic fetch", err)
     })
 
-let topicTab = () => {
+const topicName = (title) => {
     //create element
     topicTabDiv = document.createElement('div')
 
@@ -44,13 +44,8 @@ const topicContainer = document.querySelector('.topics');
 topicContainer.appendChild(topicTab(tabTitle))
 
 
-/* topics: (5) […]
-​​
-0: "javascript"​​
-1: "bootstrap"​​
-2: "technology"​​
-3: "jquery"​​
-4: "node.js"​​
-length: 5
+//const topicArray = ["javascript", "bootstrap"​​​​, "technology"​​, "jquery", "node.js"​​]
 
-*/
+response.data.topics.forEach(el => {
+    el.appendChild(tabTitle)
+})

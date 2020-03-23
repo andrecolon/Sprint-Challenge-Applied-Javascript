@@ -84,5 +84,4 @@ const articleCard = (obj) => {
 
 
 const cardContainer = document.querySelector(".cards-container");
-// / Step 6: add the menu component to the DOM.
 cardContainer.appendChild(articleCard())

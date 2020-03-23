@@ -11,7 +11,7 @@
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .then(response => {
-        console.log("An Array of Topics", response.data)
+        //console.log("An Array of Topics", response.data)
         const entryPoint = document.querySelector('.topics')
         response.data.topics.forEach(topicData => {
             const newTopic = topicName(topicData)
@@ -35,17 +35,11 @@ const topicName = (title) => {
 
     //append data to element
     tabTitle.textContent = title;
-    console.log(title)
+    //console.log(title)
     return tabTitle
 }
 
 const topicContainer = document.querySelector('.topics');
 // / Add the tab component to the DOM.
 topicContainer.appendChild(topicName())
-console.log(topicName())
-
-//const topicArray = ["javascript", "bootstrap"​​​​, "technology"​​, "jquery", "node.js"​​]
-
-// response.data.topics.forEach(el => {
-//     el.appendChild(tabTitle)
-// })
+    //console.log(topicName())

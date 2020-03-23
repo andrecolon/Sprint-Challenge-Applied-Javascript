@@ -17,3 +17,30 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+
+let newCarousel = (img) => {
+    //create element
+    carCont = document.createElement('div')
+    leftBtn = document.createElement('div')
+    rightBtn = document.createElement('div')
+    carImg = document.createElement('img')
+
+    //append children to parent
+    carCont.appendChild(leftBtn)
+    carCont.appendChild(carImg)
+    carCont.appendChild(rightBtn)
+
+    // Assign classes to elements
+    carCont.classList.add('carousel')
+    carCont.classList.add('left-button')
+    carCont.classList.add('right-button')
+
+    //append data to element
+    carImg.src = '../assets/';
+    console.log(carImg)
+
+
+    console.log(title)
+    return tabTitle
+}
